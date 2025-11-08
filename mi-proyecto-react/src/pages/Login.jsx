@@ -1,4 +1,3 @@
-import "./Login.css";
 import logo from "../assets/logo.png";
 
 function Login() {
@@ -22,12 +21,12 @@ function Login() {
           <input type="password" placeholder="Ingrese su contraseña" />
 
 
-           <a className="register-link" href="#">Registrate</a>
-          
+          <a className="register-link" href="#">Registrate</a>
+
           <button type="submit">Iniciar Sesión</button>
         </form>
 
-       
+
       </div>
     </div>
   );

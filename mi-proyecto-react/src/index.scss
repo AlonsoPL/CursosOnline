@@ -1,0 +1,6 @@
+/*Conexion de Carpetas SASS*/
+@use 'sass/base/constantes';
+@use 'sass/base/raiz';
+
+@use 'sass/pages/login';
+@use 'sass/pages/home';

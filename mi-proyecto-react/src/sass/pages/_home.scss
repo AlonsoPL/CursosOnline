@@ -1,0 +1,153 @@
+@import "../base/constantes";
+
+.contenedor-logo {
+    width: 80%;
+    height: 23%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+}
+
+.contenedor-nav {
+    width: 80%;
+}
+
+.a-nav {
+    color: $c-tertiary;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.box-body {
+    background-color: $c-secondary;
+    width: 95%;
+    height: 95%;
+}
+
+.container-1 {
+    width: 100%;
+}
+
+.box-saludo {
+    width: 50%;
+    display: flex;
+    background-color: white;
+    overflow: hidden;
+}
+
+.box-textoSaludo {
+    width: 60%;
+}
+
+.texto-saludo {
+    color: $c-tertiary;
+    font-weight: 900;
+}
+
+.box-img {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 180px;
+        height: 140px;
+        object-fit: cover;
+    }
+}
+
+.box-datos {
+    width: 50%;
+}
+
+.card-porcentaje {
+    background-color: white;
+}
+
+.icon-green {
+    color: #20AF62;
+}
+
+.icon-oranje {
+    color: $c-primary;
+}
+
+.letra-pequeña {
+    font-size: 0.6rem;
+}
+.letra-mediana{
+    font-size: 0.9rem;
+}
+.container-2 {
+    background-color: white;
+}
+
+.img-home {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 320px;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+.text-home {
+    width: 60%;
+}
+.text-2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $c-tertiary;
+    letter-spacing: 8px;
+}
+
+.text-3 {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: $c-tertiary;
+}
+.btn-verTodo{
+    background-color: $c-primary;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.card-curso{
+    background-color: white;
+}
+.img-card {
+    display: flex;
+    overflow: hidden;
+    img {
+        width: 150px;
+        height: 128px;
+        object-fit: cover;
+    }
+}
+
+.btn-t1{
+    border: none;
+    background-color: transparent;
+    color: $c-primary;
+    font-weight: 800;
+}
+.btn-t2{
+    border: none;
+    background-color: $c-primary;
+    color: white;
+    font-weight: 800;
+}
+.card-actividades{
+    background-color: white;
+}
