@@ -1,0 +1,106 @@
+/* ================================
+   ESTILOS PARA PÁGINAS DEL PROFESOR
+   ================================ */
+
+.contenedor-profesor {
+  padding: 40px;
+  margin-left: 260px; /* espacio del sidebar */
+  min-height: 100vh;
+  background: #f5f6fa;
+
+  .titulo-profesor {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #222;
+  }
+}
+
+/* ================================
+   GRID DE CURSOS
+   ================================ */
+
+.cursos-grid-profesor {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* ================================
+   TARJETAS DE CURSO
+   ================================ */
+
+.curso-card-profesor {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 12px 0;
+    color: #333;
+  }
+
+  p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* ================================
+   IMÁGENES
+   ================================ */
+
+.curso-imagen-profesor {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* ================================
+   BOTÓN
+   ================================ */
+
+.btn-profesor {
+  width: 100%;
+  background: #ff9500;
+  color: #fff;
+  padding: 10px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: #e58300;
+  }
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 768px) {
+  .contenedor-profesor {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .curso-card-profesor {
+    padding: 18px;
+  }
+}

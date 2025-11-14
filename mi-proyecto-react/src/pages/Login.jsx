@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
+import logo_cursos from "../assets/logo-cursos.png";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -26,7 +27,7 @@ function Login() {
     <div className="login-container">
       <div className="login-left">
         <img
-          src="https://yt3.googleusercontent.com/ytc/AIdro_kffVaplN5r8eBb8X4ZjIYzeAysTUSHNjx14m6nWh5H2Q=s900-c-k-c0x00ffffff-no-rj"
+          src={logo_cursos}
           className="logo"
           alt="Digital Academy"
         />

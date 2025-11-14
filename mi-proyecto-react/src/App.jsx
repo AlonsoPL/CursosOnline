@@ -8,6 +8,8 @@ import MisCursos from "./pages/student/misCursos";
 
 // 🧩 Páginas de Profesor y Admin
 import HomeProfesor from "./pages/teacher/HomeProfesor";
+import CursosProfesor from "./pages/teacher/CursosProfesor";
+import MisCursosProfesor from "./pages/teacher/MisCursosProfesor";
 import HomeAdmin from "./pages/admin/HomeAdmin";
 
 function AppRouter() {
@@ -23,6 +25,8 @@ function AppRouter() {
 
       {/* PROFESOR */}
       <Route path="/teacher/home" element={<HomeProfesor />} />
+      <Route path="/teacher/cursos" element={<CursosProfesor />} />
+      <Route path="/teacher/mis-cursos" element={<MisCursosProfesor />} />
 
       {/* ADMIN */}
       <Route path="/admin/home" element={<HomeAdmin />} />
@@ -31,3 +35,4 @@ function AppRouter() {
 }
 
 export default AppRouter;
+
