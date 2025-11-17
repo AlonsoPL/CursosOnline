@@ -58,7 +58,7 @@ function Register() {
         {/* 🔹 Botón para volver al login */}
         <div className="back-login">
           <p>
-           
+            {" "}
             <a
               href="#"
               onClick={(e) => {
@@ -66,7 +66,7 @@ function Register() {
                 navigate("/"); // vuelve al login
               }}
             >
-              
+              Regresar
             </a>
           </p>
         </div>
