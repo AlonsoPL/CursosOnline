@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png";
 import logo_cursos from "../assets/logo-cursos.png";
 
 function Login() {
@@ -17,7 +16,6 @@ function Login() {
       return;
     }
 
-    // Redirige según el rol
     if (role === "student") navigate("/student/home");
     else if (role === "teacher") navigate("/teacher/home");
     else if (role === "admin") navigate("/admin/home");
@@ -26,11 +24,7 @@ function Login() {
   return (
     <div className="login-container">
       <div className="login-left">
-        <img
-          src={logo_cursos}
-          className="logo"
-          alt="Digital Academy"
-        />
+        <img src={logo_cursos} className="logo" alt="Digital Academy" />
         <h2>Una de las academias</h2>
         <h2>
           virtuales líderes en Latinoamérica. Formación digital de calidad para
@@ -39,6 +33,7 @@ function Login() {
       </div>
 
       <div className="login-right">
+        <img src={logo_cursos} alt="Digital Academy" className="small-logo" />
         <h3>INICIAR SESIÓN</h3>
         <p>Ingresa con tu cuenta</p>
 
@@ -59,6 +54,20 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
 
+          {/* 🔹 Enlace de "¿Olvidaste tu contraseña?" funcional */}
+          <div className="extra-links">
+            <a
+              href="#"
+              className="forgot-password"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/forgot-password");
+              }}
+            >
+              ¿Olvidaste tu contraseña?
+            </a>
+          </div>
+
           <label>Tipo de usuario</label>
           <select value={role} onChange={(e) => setRole(e.target.value)}>
             <option value="">-- Selecciona --</option>
@@ -67,9 +76,21 @@ function Login() {
             <option value="admin">Administrador</option>
           </select>
 
-          <a className="register-link" href="#">
-            Registrate
-          </a>
+          <div className="register-section">
+            <p>
+              
+              <a
+                href="#"
+                className="register-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/register");
+                }}
+              >
+                Regístrate
+              </a>
+            </p>
+          </div>
 
           <button type="submit">Iniciar Sesión</button>
         </form>
@@ -79,3 +100,4 @@ function Login() {
 }
 
 export default Login;
+

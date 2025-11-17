@@ -1,16 +1,22 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
+import Register from "./pages/register";
+import ForgotPassword from "./pages/ForgotPassword";
+import EmailSent from "./pages/Emailsent";
 
-// Páginas de Estudiante
+//  Estudiante
 import Home from "./pages/student/home";
 import Cursos from "./pages/student/cursos";
 import MisCursos from "./pages/student/misCursos";
 import CourseView from "./pages/student/courseView";
 
-// Páginas de Profesor y Admin
+//  Profesor
 import HomeProfesor from "./pages/teacher/HomeProfesor";
-import CursosProfesor from "./pages/teacher/CursosProfesor";
 import MisCursosProfesor from "./pages/teacher/MisCursosProfesor";
+import CourseViewProfesor from "./pages/teacher/courseViewProfesor";
+import ProgresoEstudiante from "./pages/teacher/ProgresoEstudiante";   // <-- AGREGADO
+
+//  Admin
 import HomeAdmin from "./pages/admin/homeAdmin";
 import GetUsuario from "./pages/admin/gesUsuario";
 import GetCursos from "./pages/admin/getCursos";
@@ -21,6 +27,9 @@ function AppRouter() {
     <Routes>
       {/* LOGIN */}
       <Route path="/" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/email-sent" element={<EmailSent />} />
 
       {/* ESTUDIANTE */}
       <Route path="/student/home" element={<Home />} />
@@ -28,13 +37,15 @@ function AppRouter() {
       <Route path="/student/mis-cursos" element={<MisCursos />} />
       <Route path="/student/cursos/:id" element={<CourseView />} />
 
-
       {/* PROFESOR */}
       <Route path="/teacher/home" element={<HomeProfesor />} />
-      <Route path="/teacher/cursos" element={<CursosProfesor />} />
-      <Route path="/teacher/mis-cursos" element={<MisCursosProfesor />} />
+      <Route path="/teacher/cursos" element={<MisCursosProfesor />} />
+      <Route path="/teacher/curso/:id" element={<CourseViewProfesor />} />
 
-      {/* ADMIN */}
+      {/* 🔥 NUEVA RUTA DE PROGRESO */}
+      <Route path="/teacher/progreso" element={<ProgresoEstudiante />} />
+
+      {/* ADMINISTRADOR */}
       <Route path="/admin/home" element={<HomeAdmin />} />
       <Route path="/admin/getUsuario" element={<GetUsuario />} />
       <Route path="/admin/getCursos" element={<GetCursos />} />
@@ -44,5 +55,3 @@ function AppRouter() {
 }
 
 export default AppRouter;
-
- 
