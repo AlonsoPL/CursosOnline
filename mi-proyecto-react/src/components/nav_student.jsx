@@ -4,8 +4,8 @@ function NavStudent() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("user"); // si guardas algo del usuario
-    navigate("/"); // te lleva al login
+    localStorage.removeItem("user"); 
+    navigate("/"); 
   };
 
   return (
@@ -25,9 +25,9 @@ function NavStudent() {
         <span className="ms-2">Mis cursos</span>
       </Link>
 
-      <button onClick={handleLogout} className="a-nav py-3 px-3 text-start btn btn-link">
+      <button onClick={handleLogout} className="a-nav py-3 px-3 text-start btn btn-link text-decoration-none">
         <i className="bi bi-box-arrow-right"></i>
-        <span className="ms-2">Cerrar sesión</span>
+        <span className="ms-2 text-color">Cerrar sesión</span>
       </button>
     </div>
   );
