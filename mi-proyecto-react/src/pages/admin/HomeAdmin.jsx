@@ -1,4 +1,4 @@
-
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo-cursos.png";
 import img3 from "../../assets/img3.png";
 import img4 from "../../assets/img4.png";
@@ -9,6 +9,13 @@ import NavAdministrador from "../../components/nav_administrador";
 
 
 function HomeAdmin() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    sessionStorage.clear();
+    navigate("/");
+  };
   return (
     <div className="row mx-0 vh-100">
       {/* Barra lateral izquierda */}
@@ -76,6 +83,7 @@ function HomeAdmin() {
                       <button
                         className="dropdown-item text-danger"
                         type="button"
+                        onClick={handleLogout}
                       >
                         Cerrar sesión
                       </button>

@@ -1,4 +1,3 @@
-
 import logo from "../../assets/logo-cursos.png";
 import NavAdministrador from "../../components/nav_administrador";
 
@@ -20,6 +19,8 @@ function GetUsuario() {
                     <div className="mt-4">
                         <h4>Usuarios</h4>
                     </div>
+
+                    {/* FORMULARIO */}
                     <form className="p-4 rounded bg-white shadow-sm mt-4">
 
                         <div className="row g-3">
@@ -68,7 +69,6 @@ function GetUsuario() {
                             <div className="col-md-6">
                                 <label className="form-label">Rol asignado</label>
                                 <select className="form-select">
-                                    <option value="estudiante">Estudiante</option>
                                     <option value="profesor">Profesor</option>
                                     <option value="administrador">Administrador</option>
                                 </select>
@@ -84,20 +84,41 @@ function GetUsuario() {
                         </div>
 
                     </form>
-                    {/* BUSCADOR */}
+
+                    {/* BUSCADOR + FILTRO */}
                     <div className="mt-4">
-                        <div className="input-group">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Buscar alumno por nombre o correo..."
-                            />
-                            <button className="btn-t2 p-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                </svg>
-                                <span className="ms-2">Buscar</span>
-                            </button>
+                        <div className="d-flex justify-content-between align-items-center w-100">
+
+                            {/* INPUT + BOTÓN A LA IZQUIERDA */}
+                            <div className="input-group" style={{ maxWidth: "600px", width: "100%" }}>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="Buscar alumno por nombre o correo..."
+                                />
+
+                                <button className="btn-t2 p-2 d-flex align-items-center">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        className="bi bi-search"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                    </svg>
+                                    <span className="ms-2">Buscar</span>
+                                </button>
+                            </div>
+
+                            {/* FILTRO A LA DERECHA */}
+                            <select className="form-select ms-3" style={{ width: "200px" }}>
+                                <option value="" disabled>Seleccionar Rol</option>
+                                <option value="administrador">Administrador</option>
+                                <option value="estudiante">Profesor</option>
+                            </select>
+
                         </div>
                     </div>
 
@@ -121,7 +142,7 @@ function GetUsuario() {
                                     <td>Juan</td>
                                     <td>Pérez</td>
                                     <td>juan@example.com</td>
-                                    <td>Estudiante</td>
+                                    <td>Adminstrador</td>
                                     <td className="text-center">
                                         <button
                                             className="btn btn-sm btn-warning me-2"
@@ -136,9 +157,9 @@ function GetUsuario() {
                                         >
                                             Eliminar
                                         </button>
-
                                     </td>
                                 </tr>
+
                                 <tr>
                                     <td>2</td>
                                     <td>Maria</td>
@@ -159,14 +180,13 @@ function GetUsuario() {
                                         >
                                             Eliminar
                                         </button>
-
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
-                    {/* MODAL EDITAR USUARIO */}
+                    {/* MODAL EDITAR */}
                     <div className="modal fade" id="modalEditarUsuario" tabIndex="-1">
                         <div className="modal-dialog">
                             <div className="modal-content">
@@ -189,7 +209,6 @@ function GetUsuario() {
 
                                     <label className="form-label">Rol</label>
                                     <select className="form-select">
-                                        <option selected>Estudiante</option>
                                         <option>Profesor</option>
                                         <option>Administrador</option>
                                     </select>
@@ -208,7 +227,8 @@ function GetUsuario() {
                             </div>
                         </div>
                     </div>
-                    {/* MODAL ELIMINAR USUARIO */}
+
+                    {/* MODAL ELIMINAR */}
                     <div className="modal fade" id="modalEliminarUsuario" tabIndex="-1">
                         <div className="modal-dialog modal-dialog-centered">
                             <div className="modal-content">

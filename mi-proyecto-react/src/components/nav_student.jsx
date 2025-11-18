@@ -24,11 +24,6 @@ function NavStudent() {
         <i className="bi bi-backpack3"></i>
         <span className="ms-2">Mis cursos</span>
       </Link>
-
-      <button onClick={handleLogout} className="a-nav py-3 px-3 text-start btn btn-link text-decoration-none">
-        <i className="bi bi-box-arrow-right"></i>
-        <span className="ms-2 text-color">Cerrar sesión</span>
-      </button>
     </div>
   );
 }

@@ -14,10 +14,10 @@ import CourseView from "./pages/student/courseView";
 import HomeProfesor from "./pages/teacher/HomeProfesor";
 import MisCursosProfesor from "./pages/teacher/MisCursosProfesor";
 import CourseViewProfesor from "./pages/teacher/courseViewProfesor";
-import ProgresoEstudiante from "./pages/teacher/ProgresoEstudiante";   // <-- AGREGADO
+import ProgresoEstudiante from "./pages/teacher/ProgresoEstudiante";
 
 //  Admin
-import HomeAdmin from "./pages/admin/homeAdmin";
+import HomeAdmin from "./pages/admin/HomeAdmin";
 import GetUsuario from "./pages/admin/gesUsuario";
 import GetCursos from "./pages/admin/getCursos";
 import ReportesProgresos from "./pages/admin/reportesProgresos";
@@ -35,14 +35,12 @@ function AppRouter() {
       <Route path="/student/home" element={<Home />} />
       <Route path="/student/cursos" element={<Cursos />} />
       <Route path="/student/mis-cursos" element={<MisCursos />} />
-      <Route path="/student/cursos/:id" element={<CourseView />} />
+      <Route path="/student/courseView" element={<CourseView />} /> 
 
       {/* PROFESOR */}
       <Route path="/teacher/home" element={<HomeProfesor />} />
       <Route path="/teacher/cursos" element={<MisCursosProfesor />} />
-      <Route path="/teacher/curso/:id" element={<CourseViewProfesor />} />
-
-      {/* 🔥 NUEVA RUTA DE PROGRESO */}
+      <Route path="/teacher/curso" element={<CourseViewProfesor />} />
       <Route path="/teacher/progreso" element={<ProgresoEstudiante />} />
 
       {/* ADMINISTRADOR */}

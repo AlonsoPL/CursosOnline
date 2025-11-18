@@ -61,7 +61,7 @@ function HomeProfesor() {
         </div>
 
         {/* ===== TÍTULO CURSOS ===== */}
-        <h2 className="section-title">Cursos Activos</h2>
+        <h2 className="section-title">Mis Cursos Populares</h2>
 
         {/* ===== CARDS ===== */}
         <div className="figma-courses">
